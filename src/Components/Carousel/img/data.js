@@ -9,4 +9,4 @@ import img5 from "./10005.jpeg"
 
 
 
-export const img = [img1, img2, img3, img4, img5]
+export const img = [img1,img2,img3,img4,img5]

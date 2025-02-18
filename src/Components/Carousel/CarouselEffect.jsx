@@ -1,5 +1,6 @@
 import React from 'react'
 import { Carousel } from 'react-responsive-carousel'
+// import {img} from "./img/data"
 import {img} from "./img/data"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -15,8 +16,8 @@ const CarouselEffect = () => {
             >
 
                 {
-                    img.map((imageItemLink)=> {
-                        return <img src={imageItemLink}/>
+                    img.map((imageItemLink, i)=> {
+                        return <img src={imageItemLink} alt="" key={i}/>
                     })
 
                 }
