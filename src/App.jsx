@@ -3,6 +3,7 @@ import React from 'react'
 import Header from './Components/Header/Header'
 import CarouselEffect from './Components/Carousel/CarouselEffect'
 import Catagory from './Components/Catagory/Catagory'
+import Product from './Components/Product/Product'
 
 
 
@@ -10,14 +11,15 @@ function App() {
   
   return (
     
-      <div>
+      <>
         <Header/>
         <CarouselEffect/>
         <Catagory/>
+        <Product/>
         
         
         
-      </div>
+      </>
       
     
   )
