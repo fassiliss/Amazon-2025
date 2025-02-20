@@ -11,7 +11,7 @@ function Catagory() {
     {
       catagoryInfos.map((infos)=>( 
       
-        <CatagoryCard data = {infos}/>
+        <CatagoryCard key={infos.id} data = {infos}/>
         
       ))}
 

@@ -2,7 +2,7 @@ const catagoryInfos = [
   {
     id: 1,
     title: "Electronics",
-    name: "electonics",
+    name: "electronics",
     imgLink: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
   },
   {
