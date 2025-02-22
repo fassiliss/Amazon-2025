@@ -5,7 +5,8 @@ import { useParams } from "react-router-dom"
 import axios from 'axios'
 import { productUrl } from '../../Api/endPoints'
 import ProductCard from '../../Components/Product/ProductCard'
-import Loader from "../../Components/Loder/Loder"
+//import Loader from "../../Components/Loder/Loder"
+import Loader from "../../Components/Loader/Loader"
 
 function ProductDetail() {
   const [product, setProduct] = useState({});
@@ -37,6 +38,7 @@ axios.get(`${productUrl}/products/${productId}`)
         product={product}
         flex = {true}
         renderDesc={true}
+        renderAdd={true}
       />)}
        
        

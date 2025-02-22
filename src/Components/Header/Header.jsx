@@ -1,17 +1,30 @@
 import React from "react";
+import { useContext } from "react";
 import classes from "./Header.module.css";
 import { Link } from "react-router-dom";
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import LowerHeader from "./LowerHeader";
 import { BiCart } from "react-icons/bi";
+import { DataContext } from "../DataProvider/DataProvider";
 
 const Header = () => {
+
+  // const contextValue = useContext(DataContext);
+
+  // const [{ basket }, dispatch] = contextValue ?? [{ basket: []}, () => {}];
+  // const totalItem = basket?.reduce ((amount, item) => amount + (item.amount || 0), 0);
+
+const [{basket}, dispatch]=useContext(DataContext)
+
+  const totalItem=basket.reduce((amount,item)=>{
+    return item.amount + amount
+  },0)
   return (
-    <>
+    <section className={classes.fixed}>
       <section>
         <div className={classes.header__container}>
-          {/* logo section */}
+          
           <div className={classes.logo__container}>
             <Link to="/">
               <img
@@ -20,7 +33,7 @@ const Header = () => {
               />
             </Link>
             <div className={classes.delivery}>
-              {/* delivery */}
+              
 
               <span>
                 <SlLocationPin />
@@ -31,7 +44,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          {/* search bar */}
+          
           <div className={classes.search}>
             <select name="" id="">
               <option value="">All</option>
@@ -39,7 +52,7 @@ const Header = () => {
             <input type="text" />
             <BsSearch size={25} />
           </div>
-          {/* right side link  */}
+          
           <div className={classes.order__container}>
             <Link to="" className={classes.language}>
               <img
@@ -51,26 +64,26 @@ const Header = () => {
               </select>
             </Link>
 
-            {/* three components */}
+           
             <Link to="">
               <p>Sign In</p>
               <span>Account & Lists</span>
             </Link>
-            {/* Orders */}
-            <Link to="orders">
+            
+            <Link to="/orders">
               <p>returns</p>
               <span>& Orders</span>
             </Link>
-            {/* Cart */}
-            <Link to="cart" className={classes.cart}>
+            
+            <Link to="/cart" className={classes.cart}>
               <BiCart size={35} />
-              <span>0</span>
+              <span>{totalItem}</span>
             </Link>
           </div>
         </div>
       </section>
       <LowerHeader />
-    </>
+    </section>
   );
 };
 
