@@ -1,10 +1,11 @@
 .card__container {
     width: 300px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
     padding: 10px;
     color: black;
     text-decoration: none;
     position: relative;
+    height: 300px;
 }
 .card__container:hover .button {
     display: block;
@@ -43,7 +44,8 @@
     max-width: 1450px;
     margin: 100px auto 100px auto;
     gap: 50px;
-    justify-items: center;
+    justify-items: center; 
+    align-items: center;
 }
 .products_container section {
     margin: 0 auto;
