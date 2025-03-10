@@ -1,4 +1,4 @@
-const catagoryInfos = [
+const categoryInfos = [
   {
     id: 1,
     title: "electronics",
@@ -25,9 +25,4 @@ const catagoryInfos = [
   },
 ];
 
-export default catagoryInfos
-
-
-
-
-
+export default categoryInfos;
