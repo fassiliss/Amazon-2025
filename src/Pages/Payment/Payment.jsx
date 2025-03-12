@@ -75,11 +75,9 @@ function Payment() {
 
   return (
     <LayOut>
-      {/* header */}
       <div className={classes.payment_header}>Checkout ({totalItem}) items</div>
-      {/* payment method */}
+
       <section className={classes.payment}>
-        {/* address */}
         <div className={classes.flex}>
           <h3>Delivery Address</h3>
           <div>
@@ -90,7 +88,6 @@ function Payment() {
         </div>
         <hr />
 
-        {/* product */}
         <div className={classes.flex}>
           <h3>Review items and delivery</h3>
           <div>
@@ -101,7 +98,6 @@ function Payment() {
         </div>
         <hr />
 
-        {/* card form */}
         <div className={classes.flex}>
           <h3>Payment methods</h3>
           <div className={classes.payment_card_container}>
@@ -111,10 +107,9 @@ function Payment() {
                 {cardError && (
                   <small style={{ color: "red" }}>{cardError}</small>
                 )}
-                {/* card element */}
+
                 <CardElement onChange={handleChange} />
 
-                {/* price */}
                 <div className={classes.payment__price}>
                   <div>
                     <span style={{ display: "flex", gap: "10px" }}>
